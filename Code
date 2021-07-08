@@ -1,0 +1,19 @@
+// initializing the fan motor pins 
+
+int fanPin = 3; // choose free PWM pin;
+
+void setup()
+{   
+pinMode(fanPin, OUTPUT); // Fan output initializing 
+}
+
+void loop() 
+{
+  /* Fan */
+
+analogWrite(fanPin, 150); // fan is on (0-255) speed      
+delay(60000); // 60 seconds
+
+analogWrite(fanPin, 0); // fan is off      
+delay(3600000); // 1 hour
+}
